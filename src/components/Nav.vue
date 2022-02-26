@@ -28,7 +28,7 @@
               About
             </li></router-link
           >
-          <router-link :to="{ path: '/hello', name: 'Hello' }">
+          <router-link :to="{ path: '/login', name: 'Login' }">
             <li
               class="
                 py-8
@@ -36,7 +36,7 @@
                 hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
               "
             >
-              Hello
+              Login
             </li></router-link
           >
         </ul>

@@ -1,3 +1,18 @@
+<script setup></script>
+
 <template>
-  <h1 class="text-6xl font-bold">Home Page 🏠</h1>
+  <div
+    class="
+      flex flex-col
+      items-center
+      justify-center
+      space-y-12
+      min-h-screen-nonav
+    "
+  >
+    <h2 class="text-6xl tracking-tighter font-bold text-purple-900 font-serif">
+      Welcome
+    </h2>
+    <img src="../assets/welcome.png" alt="Hello" />
+  </div>
 </template> 
