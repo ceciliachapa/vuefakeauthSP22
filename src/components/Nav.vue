@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-900 text-yellow-100">
+  <div class="bg-pink-900 text-gray-100">
     <div class="container mx-auto flex items-center justify-between">
       <h1 class="tracking-tighter text-3xl font-thin">
-        Basic<span class="font-normal">Router</span>
+        Vue<span class="font-normal">FakeAuth</span>
       </h1>
       <nav>
         <ul class="flex space-x-4">
@@ -11,7 +11,7 @@
               class="
                 py-8
                 px-4
-                hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-900
+                hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
               "
             >
               Home
@@ -22,7 +22,7 @@
               class="
                 py-8
                 px-4
-                hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-900
+                hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
               "
             >
               About
@@ -33,7 +33,7 @@
               class="
                 py-8
                 px-4
-                hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-900
+                hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
               "
             >
               Hello
