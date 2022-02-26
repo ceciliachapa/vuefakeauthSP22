@@ -1,10 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import userAuth from "../composable/userAuth";
+import useAuth from "../composable/useAuth";
 import useError from "../composable/useError";
-
-const { isAuthenticated, login } = userAuth();
+const { isAuthenticated, login } = useAuth();
 const username = ref("");
 const password = ref("");
 const router = useRouter();
@@ -44,22 +43,24 @@ const { ready, start } = useTimeout(3000, { controls: true });
         shadow-2xl
       "
     >
-      <img class="h-64" src="../assets/login.png" alt="Login" />
+      <img class="h-64" src="../assets/login.png" alt="Hello BG" />
       <form @submit.prevent="logginIn" class="flex flex-col p-4 space-y-4">
         <input
           type="text"
           class="p-2 border-2 rounded-lg"
           placeholder="Username"
+          v-model="username"
         />
         <input
           type="password"
           class="p-2 border-2 rounded-lg"
           placeholder="Password"
+          v-model="password"
         />
         <button
           type="submit"
           @submit.prevent="logginIn"
-          class="py-2 font-bold text-gray-200 bg-pink-800 rounded-lg"
+          class="py-2 text-indigo-200 bg-indigo-600 rounded-lg"
         >
           Login
         </button>

@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import userAuth from "./composable/userAuth";
+import useAuth from "./composable/useAuth";
 import Index from "./pages/index.vue";
 import About from "./pages/about.vue";
 import Secret from "./pages/secret.vue";
 import Login from "./pages/login.vue";
 import NotFound from "./pages/404.vue";
 
-const { isAuthenticated } = userAuth();
+const { isAuthenticated } = useAuth();
 
 const routes = [
   {

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <script setup>
-import userAuth from "../composable/userAuth";
+import userAuth from "../composable/useAuth";
 const { isAuthenticated, user } = userAuth();
 </script>
 
