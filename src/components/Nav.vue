@@ -39,6 +39,17 @@
               Login
             </li></router-link
           >
+          <router-link :to="{ name: 'Secret' }">
+            <li
+              class="
+                py-8
+                px-4
+                hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
+              "
+            >
+              Secret
+            </li></router-link
+          >
         </ul>
       </nav>
     </div>
