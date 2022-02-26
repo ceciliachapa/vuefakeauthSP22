@@ -1,3 +1,16 @@
+<script setup>
+import { useRouter } from "vue-router";
+import userAuth from "../composable/userAuth";
+
+const { isAuthenticated, logout } = userAuth();
+
+const router = useRouter();
+const loggingOut = () => {
+  logout();
+  router.push("/");
+};
+</script>
+
 <template>
   <div class="bg-pink-900 text-gray-100">
     <div class="container mx-auto flex items-center justify-between">
@@ -28,7 +41,10 @@
               About
             </li></router-link
           >
-          <router-link :to="{ path: '/login', name: 'Login' }">
+          <router-link
+            v-if="!isAuthenticated"
+            :to="{ path: '/login', name: 'Login' }"
+          >
             <li
               class="
                 py-8
@@ -39,17 +55,30 @@
               Login
             </li></router-link
           >
-          <router-link :to="{ name: 'Secret' }">
-            <li
-              class="
-                py-8
-                px-4
-                hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
-              "
+          <div v-else class="flex">
+            <router-link :to="{ name: 'Secret' }">
+              <li
+                class="
+                  py-8
+                  px-4
+                  hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
+                "
+              >
+                Secret
+              </li></router-link
             >
-              Secret
-            </li></router-link
-          >
+            <button @click="loggingOut">
+              <li
+                class="
+                  px-4
+                  py-8
+                  hover:cursor-pointer hover:bg-gray-400 hover:text-yellow-900
+                "
+              >
+                Logout
+              </li>
+            </button>
+          </div>
         </ul>
       </nav>
     </div>
