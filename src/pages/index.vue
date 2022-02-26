@@ -19,11 +19,20 @@ const { isAuthenticated, user } = userAuth();
       v-if="!isAuthenticated"
       class="text-6xl tracking-tighter font-bold text-purple-900 font-serif"
     >
-      Welcome
+      <p>Welcome</p>
+      <hr />
+      <img src="../assets/welcome.png" alt="Hello" />
     </h2>
-    <h2 v-else class="text-6xl tracking-tighter font-bold font-serif">
-      Welcome {{ user }}
+
+    <h2
+      v-else
+      class="text-6xl tracking-tighter font-bold text-purple-900 font-sans"
+    >
+      <h2 class="justify-center">
+        <p>Welcome {{ user }}</p>
+      </h2>
+      <br />
+      <img src="../assets/welcome.png" alt="Hello" />
     </h2>
-    <img src="../assets/welcome.png" alt="Hello" />
   </div>
 </template> 
